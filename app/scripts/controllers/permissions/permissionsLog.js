@@ -356,6 +356,7 @@ export default class PermissionsLogController {
   getRequestedMethods (request) {
     if (
       !request.params ||
+      !request.params[0] ||
       typeof request.params[0] !== 'object' ||
       Array.isArray(request.params[0])
     ) {
